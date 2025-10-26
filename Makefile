@@ -132,7 +132,7 @@ clean:
 
 .PHONY: install-deps
 install-deps:
-	$(install_pkg) lorax xorriso coreutils gettext syslinux-nonlinux
+	$(install_pkg) lorax xorriso coreutils gettext
 	$(foreach DIR,$(filter-out test,$(_SUBDIRS)),$(MAKE) -w -C $(DIR) install-deps;)
 
 
